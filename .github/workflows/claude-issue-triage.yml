@@ -81,6 +81,10 @@ jobs:
                - Si no: créalo con `gh api -X POST repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments -f body=...`
 
             ## Formato del comentario (Markdown)
+            El comentario debe estar escrito en Markdown compatible con GitHub (GitHub Flavored Markdown),
+            de modo que GitHub lo renderice correctamente: usa encabezados (`##`), listas, **negritas**,
+            bloques de código con triple comilla invertida indicando el lenguaje y referencias `archivo:línea`.
+            No uses HTML ni sintaxis que GitHub no soporte. Estructura:
             - **Resumen** del problema
             - **Clasificación**: labels asignados y por qué
             - **Diagnóstico**: causa probable y archivos/funciones implicadas con referencias `archivo:línea`
