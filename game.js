@@ -253,6 +253,7 @@ function loop(ts) {
     }
   }
   draw();
+  if (gameOver) return; // endGame() pudo ejecutarse dentro de lockPiece(); no reanudar el bucle
   animId = requestAnimationFrame(loop);
 }
 
